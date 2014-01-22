@@ -47,4 +47,23 @@ Anglicisation du nommage pour en faciliter l'utilisation.
 * Affectation des élèves
 * Administration
 
+La saisie doit se faire rapidement. pour ce faire on met en oeuvre dans les modules de saisie les moyens suivants :
 
+* Sauvegarde des données en temps réel, pas besoin de bouton de soumission
+* Soin particuliers à l'utilisation de la touche tablulation, pour permettre une saisie à la chaîne.
+
+
+## Technologies utilisées
+
+* Application d'échange de données : Ruby On Rails
+* Stockage des données : Mongodb
+* Client Web : Emberjs
+* Framework de feuille de style : Twitter Bootstrap 3.
+* Authentification : simple couche Rack avec une protection par mot de passe définie en variable d'environnement, pour la version de production.
+* Hébergement :
+  * soit Anynines (beta - gratuit, localisation Allemagne)
+  * soit Heroku (gratuit pour une application de ce gabarit)
+
+## Licence
+
+Cette application est disponible en open source sous licence MIT.
