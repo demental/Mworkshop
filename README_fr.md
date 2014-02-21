@@ -50,7 +50,7 @@ Anglicisation du nommage pour en faciliter l'utilisation.
 La saisie doit se faire rapidement. pour ce faire on met en oeuvre dans les modules de saisie les moyens suivants :
 
 * Sauvegarde des données en temps réel, pas besoin de bouton de soumission
-* Soin particuliers à l'utilisation de la touche tablulation, pour permettre une saisie à la chaîne.
+* Utilisation de SlickGrid https://github.com/mleibman/SlickGrid/wiki pour conserver le look and feel Excel
 
 
 ## Technologies utilisées
