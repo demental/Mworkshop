@@ -37,6 +37,7 @@ Anglicisation du nommage pour en faciliter l'utilisation.
 * Nombre de participants max : max_attendees
 * Choix atelier : workshop1_choice1 workshop1_choice2
 
+L'ensemble du code et des vues sera initialement écrit en anglais, les traductions en français seront gérées par les fichiers d'internationalisation et les traductions saisies dans http://www.oneskyapp.com/
 
 ## Interface
 
