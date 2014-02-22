@@ -16,6 +16,7 @@ gem 'slim-rails'
 gem 'unicorn'
 gem 'unicorn-rails'
 gem 'mongoid', git: 'git://github.com/mongoid/mongoid.git'
+gem 'figaro'
 
 group :development do
   gem 'better_errors'
