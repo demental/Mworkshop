@@ -1,5 +1,8 @@
 require 'spec_helper'
 
 describe Period do
-  pending "add some examples to (or delete) #{__FILE__}"
+  subject { Period.new }
+  it 'can be persisted' do
+    subject.save.should be_true
+  end
 end
