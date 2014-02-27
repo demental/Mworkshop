@@ -9,7 +9,6 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'bootstrap-sass', '>= 3.0.0.0'
-gem 'figaro'
 gem 'high_voltage'
 gem 'simple_form'
 gem 'slim-rails'
@@ -28,6 +27,7 @@ group :development do
   gem 'rb-fchange', :require=>false
   gem 'rb-fsevent', :require=>false
   gem 'rb-inotify', :require=>false
+  gem 'guard-rspec', require: false
 end
 
 group :development, :test do
