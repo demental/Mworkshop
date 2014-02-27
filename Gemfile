@@ -18,7 +18,6 @@ gem 'mongoid', git: 'git://github.com/mongoid/mongoid.git'
 gem 'figaro'
 
 group :development do
-  gem 'database_cleaner'
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
   gem 'guard-bundler'
@@ -32,6 +31,7 @@ group :development do
 end
 
 group :development, :test do
+  gem 'database_cleaner'
   gem 'factory_girl_rails'
   gem 'rspec-rails'
 end
