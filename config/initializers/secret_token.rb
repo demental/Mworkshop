@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Mworkshop::Application.config.secret_key_base = '325095651f5190269a7def00bff01c2b9984270e3a99753cefe908621dc0be08000bd3bf3d36250febe22f8adccd3c3fc23860bdd52fcbabf4c0ccdfe7da5ec5'
+Mworkshop::Application.config.secret_key_base = ENV['APP_SECRET_KEY']
