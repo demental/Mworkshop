@@ -1,5 +1,9 @@
 require 'spec_helper'
 
 describe Group do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe 'Associations' do
+    subject { build :group }
+    it { should respond_to :grade }
+    it { should respond_to :students }
+  end
 end
