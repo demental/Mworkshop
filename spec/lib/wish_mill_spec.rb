@@ -27,6 +27,7 @@ describe WishMill do
     let(:andrej) { create(:student, happiness: andrej_happiness) }
     let(:boxing) { create(:workshop, grades: [boris.grade], max_attendees: 1) }
     let(:roller) { create(:workshop, grades: [boris.grade, andrej.grade], max_attendees: 2) }
+    subject { WishMill.new(first_period).call }
     context 'when Boris and Andrej want to access a too small workshop' do
       before do
         boris.wishes << build(:wish, period: first_period, workshop: boxing, weight: 2, wish_group: 1)
@@ -37,6 +38,7 @@ describe WishMill do
         let(:boris_happiness) { 10 }
         let(:andrej_happiness) { 0 }
         it 'assigns Andrej to workshop' do
+          subject
           boxing.attendees.should eq [andrej]
         end
       end
@@ -44,6 +46,7 @@ describe WishMill do
         let(:boris_happiness) { 0 }
         let(:andrej_happiness) { 10 }
         it 'assigns Boris to workshop' do
+          subject
           boxing.attendees.should eq [boris]
         end
       end
