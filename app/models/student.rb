@@ -7,4 +7,6 @@ class Student
   embeds_many :wishes
   embeds_many :assignments
   belongs_to :group
+
+  delegate :grade, to: :group
 end

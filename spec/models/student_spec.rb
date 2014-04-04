@@ -6,5 +6,6 @@ describe Student do
     it { should respond_to :wishes }
     it { should respond_to :assignments }
     it { should respond_to :group }
+    it { should respond_to :grade }
   end
 end
