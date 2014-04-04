@@ -108,6 +108,9 @@ GEM
     method_source (0.8.2)
     mime-types (1.25.1)
     minitest (4.7.5)
+    mongoid_magic_counter_cache (1.1.0)
+      mongoid
+      rake
     moped (2.0.0.beta6)
       bson (~> 2.2)
       connection_pool (~> 1.2)
@@ -230,6 +233,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   mongoid!
+  mongoid_magic_counter_cache
   quiet_assets
   rails (= 4.0.2)
   rails_layout

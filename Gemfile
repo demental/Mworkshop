@@ -15,6 +15,7 @@ gem 'slim-rails'
 gem 'unicorn'
 gem 'unicorn-rails'
 gem 'mongoid', git: 'git://github.com/mongoid/mongoid.git'
+gem 'mongoid_magic_counter_cache'
 gem 'figaro'
 
 group :development do
