@@ -33,6 +33,8 @@ RSpec.configure do |config|
   #     --seed 1234
   config.order = "random"
   config.include FactoryGirl::Syntax::Methods
+  config.filter_run focused: true
+  config.run_all_when_everything_filtered = true
 
   config.before(:suite) do
     DatabaseCleaner.strategy = :truncation
