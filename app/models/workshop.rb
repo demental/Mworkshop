@@ -10,4 +10,10 @@ class Workshop
   has_many :wishes
   belongs_to :period
 
+
+  def attendees
+    Student.in id: assignments.map(&:student_id)
+  end
+  alias_method :students, :attendees
+
 end
