@@ -26,7 +26,8 @@ class WishMill
   end
 
   def set_assignments workshop, students
-    while student = students.next && workshop.available? do
+    students.each do |student|
+      return unless workshop.available?
       workshop.assignments << Assignment.build(student: student)
     end
   end

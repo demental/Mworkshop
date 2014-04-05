@@ -16,4 +16,7 @@ class Workshop
   end
   alias_method :students, :attendees
 
+  def available?
+    assignment_count < max_attendees
+  end
 end
