@@ -6,19 +6,19 @@ class WishMill
   end
 
   def call
-    2.times do |wishgroup|
+    2.times do |weight|
       period.workshops.each do |workshop|
-        fill workshop, wishgroup
+        fill workshop, weight
       end
       period.available_workshops.each do |workshop|
-        fill_with_unassigned workshop, wishgroup
+        fill_with_unassigned workshop, weight
       end
     end
 
   end
 
-  def fill workshop, wishgroup
-    set_assignments workshop, Student.wishing(workshop, wishgroup).order('happiness ASC')
+  def fill workshop, weight
+    set_assignments workshop, Student.wishing(workshop, weight).order('happiness ASC')
   end
 
   def fill_with_unassigned workshop, wishgroup

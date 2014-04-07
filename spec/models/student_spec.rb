@@ -9,7 +9,7 @@ describe Student do
     it { should respond_to :grade }
   end
 
-  describe 'scopes', focused: true do
+  describe 'scopes' do
     describe '#wishing' do
       let(:boxing) { create(:workshop) }
       let(:roller) { create(:workshop) }
