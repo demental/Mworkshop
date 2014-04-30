@@ -12,7 +12,8 @@ describe Workshop do
   describe 'Computed associations' do
     describe '#attendees' do
       let(:workshop) { create(:workshop) }
-      let(:boris) { create(:student) }
+      let(:boris)  { create(:student) }
+      let(:andrej) { create(:student) }
       before do
         create(:assignment, workshop: workshop, student: boris)
       end
@@ -22,7 +23,7 @@ describe Workshop do
   end
 
   describe '#available?' do
-    let(:workshop) { create(:workshop) }
+    let(:workshop) { create(:workshop, max_attendees: 1) }
     let(:boris)    { create(:student) }
     subject { workshop.available? }
     context 'still some place ...' do

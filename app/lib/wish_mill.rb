@@ -10,25 +10,17 @@ class WishMill
       period.workshops.each do |workshop|
         fill workshop, weight
       end
-      period.available_workshops.each do |workshop|
-        fill_with_unassigned workshop, weight
-      end
     end
-
   end
 
   def fill workshop, weight
     set_assignments workshop, Student.wishing(workshop, weight).order('happiness ASC')
   end
 
-  def fill_with_unassigned workshop, wishgroup
-
-  end
-
   def set_assignments workshop, students
     students.each do |student|
       return unless workshop.available?
-      workshop.assignments << Assignment.build(student: student)
+      workshop.assignments << Assignment.new(student: student)
     end
   end
 end

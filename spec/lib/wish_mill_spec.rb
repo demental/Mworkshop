@@ -2,6 +2,14 @@ require 'spec_helper'
 
 describe WishMill do
 
+  let(:first_period) { create(:period) }
+  let(:boris)  { create(:student, happiness: boris_happiness) }
+  let(:andrej) { create(:student, happiness: andrej_happiness) }
+  let(:boxing) { create(:workshop, period: first_period, grades: [boris.grade], max_attendees: 1) }
+  let(:roller) { create(:workshop, period: first_period, grades: [boris.grade, andrej.grade], max_attendees: 2) }
+  let(:boris_happiness)  { 0 }
+  let(:andrej_happiness) { 0 }
+
   describe '#initialize' do
     subject { WishMill.new(period) }
 
@@ -21,36 +29,43 @@ describe WishMill do
 
   end
 
-  describe '#call' do
-    let(:first_period) { create(:period) }
-    let(:boris)  { create(:student, happiness: boris_happiness) }
-    let(:andrej) { create(:student, happiness: andrej_happiness) }
-    let(:boxing) { create(:workshop, grades: [boris.grade], max_attendees: 1) }
-    let(:roller) { create(:workshop, grades: [boris.grade, andrej.grade], max_attendees: 2) }
-    subject { WishMill.new(first_period).call }
-    context 'when Boris and Andrej want to access a too small workshop' do
-      before do
-        boris.wishes << build(:wish, period: first_period, workshop: boxing, weight: 2, wish_group: 1)
-        boris.wishes << build(:wish, period: first_period, workshop: roller, weight: 1, wish_group: 1)
-      end
-
-      context 'when Boris was more happy before' do
-        let(:boris_happiness) { 10 }
-        let(:andrej_happiness) { 0 }
-        it 'assigns Andrej to workshop' do
-          subject
-          boxing.attendees.should eq [andrej]
-        end
-      end
-      context 'when Andrej was more happy before' do
-        let(:boris_happiness) { 0 }
-        let(:andrej_happiness) { 10 }
-        it 'assigns Boris to workshop' do
-          subject
-          boxing.attendees.should eq [boris]
-        end
+  describe '#set_assignments' do
+    subject { WishMill.new(first_period).set_assignments(workshop, [boris, andrej]) }
+    context 'with big enough workshop' do
+      let(:workshop) { roller }
+      it 'adds all the attendees' do
+        subject
+        workshop.attendees.size.should eq 2
       end
     end
   end
 
+  describe '#call' do
+    subject { WishMill.new(first_period).call }
+    context 'when Boris and Andrej want to access a too small workshop' do
+      before do
+        andrej.wishes << build(:wish, period: first_period, workshop: boxing, weight: 1)
+        boris.wishes  << build(:wish, period: first_period, workshop: boxing, weight: 1)
+        boris.wishes  << build(:wish, period: first_period, workshop: roller, weight: 2)
+      end
+
+      context 'when Boris is happier than Andrej' do
+        let(:boris_happiness)  { 10 }
+        let(:andrej_happiness) { 0 }
+
+        it 'assigns Andrej to workshop' do
+          subject
+          boxing.attendees.to_a.should eq [andrej]
+        end
+      end
+      context 'when Andrej is happier than Boris' do
+        let(:boris_happiness) { 0 }
+        let(:andrej_happiness) { 10 }
+        it 'assigns Boris to workshop' do
+          subject
+          boxing.attendees.to_a.should eq [boris]
+        end
+      end
+    end
+  end
 end
