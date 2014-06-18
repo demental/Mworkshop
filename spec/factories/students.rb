@@ -2,8 +2,9 @@
 
 FactoryGirl.define do
   factory :student do
-    first_name "MyString"
-    last_name "MyString"
+    group
+    first_name "Marcus"
+    last_name "Garvey"
     happiness 1
   end
 end

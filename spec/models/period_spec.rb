@@ -23,4 +23,23 @@ describe Period do
     end
   end
 
+  describe '#available_workshops' do
+    let(:period)  { create(:period) }
+    let!(:boxing) { create(:workshop, period: period, max_attendees: 2) }
+    let!(:roller) { create(:workshop, period: period, max_attendees: 1) }
+    subject { period.available_workshops }
+    context 'before anything assigned' do
+      it { should match_array [boxing, roller] }
+    end
+
+    context 'when some workshop are full' do
+      before { create(:assignment, workshop: roller) }
+      it { should match_array [boxing] }
+    end
+
+    context 'when some workshop partially filled' do
+      before { create(:assignment, workshop: boxing) }
+      it { should match_array [boxing, roller] }
+    end
+  end
 end
