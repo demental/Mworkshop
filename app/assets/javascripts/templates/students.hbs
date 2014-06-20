@@ -1,28 +1,3 @@
 <h2>Students</h2>
 
-{{view Mworkshop.GridContainerView id="grid"}}
-
-<table class="table">
-  <thead>
-    <tr>
-      <th>First Name</th>
-      <th>Last Name</th>
-    </tr>
-    </th>
-  </thead>
-  <tfoot>
-    <tr>
-      <th>First Name</th>
-      <th>Last Name</th>
-    </tr>
-    </th>
-  </tfoot>
-  <tbody>
-    {{#each}}
-      <tr>
-        <td>{{first_name}}</td>
-        <td>{{last_name}}</td>
-      </tr>
-    {{/each}}
-  </tbody>
-</table>
+{{view Mworkshop.GridContainerView id="grid" model=model }}
