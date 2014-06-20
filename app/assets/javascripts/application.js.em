@@ -1,4 +1,5 @@
 #= require jquery
+#= require jquery.handsontable.full
 #= require handlebars
 #= require ember
 #= require ember-data
