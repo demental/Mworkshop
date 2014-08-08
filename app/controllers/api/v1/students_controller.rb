@@ -1,5 +1,6 @@
 class Api::V1::StudentsController < ApplicationController
   respond_to :json
+  skip_before_action :verify_authenticity_token
 
   def index
     respond_with Student.all
