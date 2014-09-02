@@ -13,7 +13,6 @@ class Mworkshop.GridContainerView extends Ember.View
       stretchH: 'all',
       minSpareRows: 0,
       columns: [
-        # {data: @property("id")},
         {data: @property("first_name")},
         {data: @property("last_name")}
       ]
@@ -24,7 +23,7 @@ class Mworkshop.GridContainerView extends Ember.View
         student.get(attr)
       else
         student.set(attr,value)
-        student.save
+        student.save()
   newStudent: ->
     # debugger
     Mworkshop.__container__.lookup('store:main').createRecord 'student'

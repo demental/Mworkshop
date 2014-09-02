@@ -4,5 +4,5 @@ Mworkshop.Router.map ->
   @resource 'students', path: '/'
   @resource 'workshops', path: '/ateliers'
   @resource 'assignments'
-  @resource 'levels'
+  @resource 'groups'
 

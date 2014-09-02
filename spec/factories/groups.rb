@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :group do
-    grade
-    name "Champollion"
+    grade Settings['grades'].first
+    name 'CP1'
   end
 end
