@@ -5,6 +5,8 @@ Mworkshop::Application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :students
+      resources :groups
+      resources :grades, only: :index
     end
   end
 
