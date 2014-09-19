@@ -32,6 +32,8 @@ group :development do
   gem 'rb-fsevent', :require=>false
   gem 'rb-inotify', :require=>false
   gem 'guard-rspec', require: false
+  gem 'spring'
+  gem 'spring-commands-rspec'
 end
 
 group :development, :test do
