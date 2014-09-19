@@ -13,7 +13,15 @@ guard 'rails' do
 end
 
 
-guard :rspec do
+guard :rspec,
+  cmd: 'spring rspec -f doc',
+  spec_paths: ['spec'],
+  failed_mode: :focus,
+  all_after_pass: true,
+  all_on_start: true,
+  notification: true,
+  run_all: { cmd: 'spring rspec spec', message: 'running all specs' }  do
+
   watch(%r{^spec/.+_spec\.rb$})
   watch(%r{^lib/(.+)\.rb$})     { |m| "spec/lib/#{m[1]}_spec.rb" }
   watch('spec/spec_helper.rb')  { "spec" }
