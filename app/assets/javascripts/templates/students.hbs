@@ -1,3 +1,14 @@
 <h2>Students</h2>
 
+<ul>
+  {{#each grade in grades}}
+    <li>  {{grade}}</li>
+  {{/each}}
+</ul>
+<ul>
+{{#each state in states}}
+  <li>{{state}}</li>
+{{/each}}
+</ul>
+
 {{view Mworkshop.GridContainerView id="grid" model=model }}

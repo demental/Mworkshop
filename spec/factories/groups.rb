@@ -3,6 +3,6 @@
 FactoryGirl.define do
   factory :group do
     grade Settings['grades'].first
-    name 'CP1'
+    name 'CE1 1'
   end
 end
