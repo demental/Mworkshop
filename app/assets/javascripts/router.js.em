@@ -5,4 +5,5 @@ Mworkshop.Router.map ->
   @resource 'workshops', path: '/ateliers'
   @resource 'assignments'
   @resource 'groups'
+  @resource 'periods', path: '/config'
 
