@@ -2,16 +2,16 @@ require 'spec_helper'
 
 describe ImportController do
 
-  describe "GET 'index'" do
+  describe "GET 'new'" do
     it "returns http success" do
-      get 'index'
+      get 'new'
       response.should be_success
     end
   end
 
-  describe "GET 'create'" do
+  describe "POST 'create'" do
     it "returns http success" do
-      get 'create'
+      post 'create'
       response.should be_success
     end
   end

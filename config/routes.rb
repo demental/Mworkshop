@@ -1,8 +1,8 @@
 Mworkshop::Application.routes.draw do
 
-  get 'import/index'
+  get 'import/new'
 
-  get 'import/create'
+  post 'import/create'
 
   root :to => 'home#index'
 
