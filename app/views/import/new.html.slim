@@ -1,0 +1,9 @@
+- content_for :title do
+  | Import CSV
+h3 Import fichier CSV
+=form_tag(url_for(controller: 'import', action: 'create'), role: 'form', multipart: true)
+  div.form-group
+    label[for="filename"] Fichier CSV
+    = file_field_tag 'filename', accept: '.csv'
+    p.help-block Fichier contenant la liste des élèves au format csv
+  = submit_tag "Importer", class: 'btn btn-default'
