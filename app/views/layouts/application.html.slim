@@ -6,6 +6,11 @@ html
       = content_for?(:title) ? yield(:title) : 'Mworkshop'
     meta name="description" content="#{content_for?(:description) ? yield(:description) : 'Mworkshop'}"
     == stylesheet_link_tag "application", :media => "all"
-    == javascript_include_tag "application"
+    == content_for?(:appjs) ? yield(:appjs) : nil
     == csrf_meta_tags
   body
+    == render 'layouts/header'
+    main.container-fluid[role="main"]
+      .row
+        == yield
+    == render 'layouts/footer'

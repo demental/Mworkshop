@@ -1,11 +1,12 @@
-<h1>MWorkshop</h1>
-<nav>
-  <ul>
-    <li>{{#link-to 'students'}}Students{{/link-to}}</li>
-    <li>{{#link-to 'workshops'}}Workshops{{/link-to}}</li>
-    <li>{{#link-to 'assignments'}}Assignments{{/link-to}}</li>
-    <li>{{#link-to 'groups'}}Groups{{/link-to}}</li>
-    <li>{{#link-to 'periods'}}Periods{{/link-to}}</li>
-  </ul>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid col-md-12">
+    <ul class="nav navbar-nav">
+      <li>{{#link-to 'students'}}Students{{/link-to}}</li>
+      <li>{{#link-to 'workshops'}}Workshops{{/link-to}}</li>
+      <li>{{#link-to 'assignments'}}Assignments{{/link-to}}</li>
+      <li>{{#link-to 'groups'}}Groups{{/link-to}}</li>
+      <li>{{#link-to 'periods'}}Periods{{/link-to}}</li>
+    </ul>
+  </div>
 </nav>
 {{outlet}}
