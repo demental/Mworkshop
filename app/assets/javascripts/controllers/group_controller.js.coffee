@@ -1,4 +1,4 @@
-class Mworkshop.StudentController extends Ember.ObjectController
+class Mworkshop.GroupController extends Ember.ObjectController
   isEditing: false,
 
   actions:

@@ -4,7 +4,7 @@ class Mworkshop.StudentsController extends Ember.ArrayController
   # grades: Ember.computed.alias('controllers.application.grades')
   # states: Ember.computed.alias('controllers.application.states')
   actions:
-    createStudent: () ->
+    create: () ->
       return false unless (@first_name && @last_name)
       student = @store.createRecord 'student', first_name: @first_name, last_name: @last_name
       @first_name = ''
