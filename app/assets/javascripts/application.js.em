@@ -8,4 +8,6 @@
 #= require mworkshop
 
 # for more details see: http://emberjs.com/guides/application/
-window.Mworkshop = Ember.Application.create()
+window.Mworkshop = Ember.Application.create({
+  rootElement: '#ember-app'
+})

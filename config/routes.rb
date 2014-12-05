@@ -1,5 +1,9 @@
 Mworkshop::Application.routes.draw do
 
+  get 'import/new'
+
+  post 'import/create'
+
   root :to => 'home#index'
 
   namespace :api do
