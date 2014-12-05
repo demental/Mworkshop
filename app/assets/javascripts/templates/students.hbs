@@ -1,14 +1,38 @@
 <h2>Students</h2>
 
-<ul>
-  {{#each grade in grades}}
-    <li>  {{grade}}</li>
-  {{/each}}
-</ul>
-<ul>
-{{#each state in states}}
-  <li>{{state}}</li>
-{{/each}}
-</ul>
 
-{{view Mworkshop.GridContainerView id="grid" model=model }}
+<table class="table table-bordered table-nopad">
+<tr>
+<th>First Name</th>
+<th>Last Name</th>
+</tr>
+{{#each itemController="student"}}
+  <tr>
+    <td>
+      {{input type="text" value=first_name focus-out="acceptChanges" insert-newline="acceptChanges"}}
+    </td>
+    <td>
+      {{input type="text" value=last_name insert-newline="acceptChanges" focus-out="acceptChanges"}}
+    </td>
+  </tr>
+{{/each}}
+<tr>
+  <td>
+  {{input
+  type="text"
+  id="new-student-first-name"
+  placeholder="First name"
+  value=first_name
+  action="createStudent"}}
+  </td>
+  <td>
+  {{input
+  type="text"
+  id="new-student-last-name"
+  placeholder="Last name"
+  value=last_name
+  action="createStudent"
+  focus-out="createStudent"}}
+  </td>
+</tr>
+</table>

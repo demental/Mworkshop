@@ -1,0 +1,13 @@
+table.table-nopad {
+  td {
+    padding: 0 !important;
+    input[type=text] {
+      width: 100%;
+      padding: .5em 1em;
+      margin: 0;
+      border: 0;
+      border-bottom: 1px solid #ccc;
+    }
+  }
+
+}
