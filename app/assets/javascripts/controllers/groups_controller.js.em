@@ -1,7 +1,7 @@
 class Mworkshop.GroupsController extends Ember.ArrayController
   needs: ['application']
 
-  grades: Ember.computed.alias('controllers.application.grades')
+  gradesBinding: 'controllers.application.grades'
 
   actions:
     create: () ->

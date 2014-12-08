@@ -1,6 +1,5 @@
 class Mworkshop.StudentController extends Ember.ObjectController
-  isEditing: false,
-
+  isEditing: false
   actions:
     edit: () ->
       @isEditing = true

@@ -6,13 +6,17 @@
 <th>First Name</th>
 <th>Last Name</th>
 </tr>
-{{#each itemController="student"}}
+{{#each student in model itemController="student"}}
   <tr>
     <td>
-      {{input type="text" value=first_name focus-out="acceptChanges" insert-newline="acceptChanges"}}
+      {{input type="text" value=student.first_name focus-out="acceptChanges" insert-newline="acceptChanges"}}
     </td>
     <td>
-      {{input type="text" value=last_name insert-newline="acceptChanges" focus-out="acceptChanges"}}
+      {{input type="text" value=student.last_name insert-newline="acceptChanges" focus-out="acceptChanges"}}
+    </td>
+    <td>
+      {{student.group.content.name}}
+      {{view "groups_select" selection=student.group.content content=groups change="acceptChanges"}}
     </td>
   </tr>
 {{/each}}
@@ -33,6 +37,9 @@
   value=last_name
   action="create"
   focus-out="create"}}
+  </td>
+  <td>
+  {{view "groups_select" selection=currentGroup content=groups prompt = '--'}}
   </td>
 </tr>
 </table>
