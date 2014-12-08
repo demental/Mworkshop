@@ -8,9 +8,14 @@ class Mworkshop.StudentsController extends Ember.ArrayController
     create: () ->
       return false unless (@first_name && @last_name)
 
-      console.log @currentGroup.name
-      @student = @store.createRecord 'student', first_name: @first_name, last_name: @last_name, group: @currentGroup
-      @student.save()
+      console.log @currentGroup.id
+
+      @student = @store.createRecord 'student', first_name: @first_name, last_name: @last_name
+      student = @student
+      @store.find('group', @currentGroup.id).then (group)->
+        student.group = group
+        student.save()
+
       @first_name = ''
       @last_name = ''
       $('#new-student-first-name').focus()

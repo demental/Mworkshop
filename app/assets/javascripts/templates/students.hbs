@@ -15,7 +15,6 @@
       {{input type="text" value=student.last_name insert-newline="acceptChanges" focus-out="acceptChanges"}}
     </td>
     <td>
-      {{student.group.content.name}}
       {{view "groups_select" selection=student.group.content content=groups change="acceptChanges"}}
     </td>
   </tr>
