@@ -1,1 +1,38 @@
 <h2>Groups</h2>
+
+<table class="table table-bordered table-nopad">
+<tr>
+<th>Name</th>
+<th>Grade</th>
+</tr>
+{{#each itemController="group"}}
+  <tr>
+    <td>
+      {{input type="text" value=name focus-out="acceptChanges" insert-newline="acceptChanges"}}
+    </td>
+    <td>
+      {{grade}}
+    </td>
+  </tr>
+{{/each}}
+<tr>
+  <td>
+  {{input
+  type="text"
+  id="new-group-name"
+  placeholder="Name"
+  value=name
+  action="create"
+  focus-out="create"}}
+  </td>
+  <td>
+  {{view "select"
+  content = grades
+  id="new-group-grade"
+  placeholder="Last name"
+  value=grade
+  action="create"
+  focus-out="create"}}
+  </td>
+</tr>
+</table>

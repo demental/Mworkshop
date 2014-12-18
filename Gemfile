@@ -18,7 +18,7 @@ gem 'mongoid', github: 'mongoid/mongoid'
 gem 'mongoid_magic_counter_cache'
 gem 'figaro'
 gem 'ember-rails'
-gem 'ember-source', '~> 1.5.1'
+#gem 'ember-source', '~> 1.5.1'
 gem 'ember_script-rails'
 
 group :development do

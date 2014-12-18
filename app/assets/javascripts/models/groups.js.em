@@ -1,3 +1,4 @@
 class Mworkshop.Group extends DS.Model
-  name: DS.attr('string'),
-  grade: DS.belongsTo('grade')
+  name: DS.attr('string')
+  grade: DS.attr('string')
+  students: DS.hasMany('student')

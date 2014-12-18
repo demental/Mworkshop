@@ -57,6 +57,15 @@ describe Api::V1::StudentsController do
       student.reload
       student.first_name.should eq 'Mathieu'
     end
-  end
 
+    context 'allowing group change' do
+      let(:other_group) { create :group }
+      let(:student_params){ {group_id: other_group.id.to_s} }
+      it 'allows group change' do
+        subject
+        student.reload
+        student.group.id.should eq other_group.id
+      end
+    end
+  end
 end
