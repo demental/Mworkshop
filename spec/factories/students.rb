@@ -3,8 +3,7 @@
 FactoryGirl.define do
   factory :student do
     group
-    first_name "Marcus"
-    last_name "Garvey"
+    name "Marcus Garvey"
     happiness 1
   end
 end
