@@ -22,10 +22,10 @@ describe Api::V1::StudentsController do
   describe 'show' do
 
     context 'with student called Toto' do
-      let(:student){ create :student, first_name: 'Toto' }
+      let(:student){ create :student, name: 'Toto' }
       subject { JSON.parse( get('show', id: student, format: 'json').body ) }
       it 'get a student named Toto' do
-        subject['student']['first_name'].should eq 'Toto'
+        subject['student']['name'].should eq 'Toto'
       end
     end
 
@@ -39,7 +39,7 @@ describe Api::V1::StudentsController do
   end
 
   describe 'create' do
-    let(:student_params){ {first_name: 'Mathieu', last_name:'Carrandié'} }
+    let(:student_params){ {name:'Toto Carrandié'} }
     subject{ post('create', student:student_params, format: 'json')}
     it {should be_success}
     it 'creates a new student' do
@@ -48,14 +48,14 @@ describe Api::V1::StudentsController do
   end
 
   describe 'update' do
-    let(:student_params){ {first_name: 'Mathieu'} }
-    let(:student){ create :student, first_name: 'Toto' }
+    let(:student_params){ {name: 'Mathieu'} }
+    let(:student){ create :student, name: 'Toto' }
     subject{ put('update', id: student, student:student_params, format: 'json')}
     it {should be_success}
     it 'student name is Mathieu' do
       subject
       student.reload
-      student.first_name.should eq 'Mathieu'
+      student.name.should eq 'Mathieu'
     end
 
     context 'allowing group change' do
