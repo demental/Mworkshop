@@ -1,97 +1,78 @@
 Mworkshop.Student.FIXTURES = [
   {
     "id": 1,
-    "first_name": "Schultz",
-    "last_name": "Washington"
+    "name": "Washington Armel"
   },
   {
     "id": 2,
-    "first_name": "Sondra",
-    "last_name": "Wall"
+    "name": "Wall Armel"
   },
   {
     "id": 3,
-    "first_name": "Garrett",
-    "last_name": "Giles"
+    "name": "Giles Armel"
   },
   {
     "id": 4,
-    "first_name": "Blair",
-    "last_name": "Morrow"
+    "name": "Morrow Armel"
   },
   {
     "id": 5,
-    "first_name": "Moran",
-    "last_name": "Reynolds"
+    "name": "Reynolds Armel"
   },
   {
     "id": 6,
-    "first_name": "Hutchinson",
-    "last_name": "Christensen"
+    "name": "Christensen Armel"
   },
   {
     "id": 7,
-    "first_name": "Stefanie",
-    "last_name": "Rowland"
+    "name": "Rowland Armel"
   },
   {
     "id": 8,
-    "first_name": "Wood",
-    "last_name": "Cervantes"
+    "name": "Cervantes Armel"
   },
   {
     "id": 9,
-    "first_name": "Teri",
-    "last_name": "Williamson"
+    "name": "Williamson Armel"
   },
   {
     "id": 10,
-    "first_name": "Kidd",
-    "last_name": "Downs"
+    "name": "Downs Armel"
   },
   {
     "id": 11,
-    "first_name": "Beasley",
-    "last_name": "Moore"
+    "name": "Moore Armel"
   },
   {
     "id": 12,
-    "first_name": "Tabatha",
-    "last_name": "Burnett"
+    "name": "Burnett Armel"
   },
   {
     "id": 13,
-    "first_name": "Guerra",
-    "last_name": "Owen"
+    "name": "Owen Armel"
   },
   {
     "id": 14,
-    "first_name": "Gould",
-    "last_name": "Jefferson"
+    "name": "Jefferson Armel"
   },
   {
     "id": 15,
-    "first_name": "Solomon",
-    "last_name": "Weiss"
+    "name": "Weiss Armel"
   },
   {
     "id": 16,
-    "first_name": "Lopez",
-    "last_name": "Schroeder"
+    "name": "Schroeder Armel"
   },
   {
     "id": 17,
-    "first_name": "Wilkerson",
-    "last_name": "Duffy"
+    "name": "Duffy Armel"
   },
   {
     "id": 18,
-    "first_name": "Rebekah",
-    "last_name": "Hill"
+    "name": "Hill Armel"
   },
   {
     "id": 19,
-    "first_name": "Alma",
-    "last_name": "Nash"
+    "name": "Nash Armel"
   }
 ]
