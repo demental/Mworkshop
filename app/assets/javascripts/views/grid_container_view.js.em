@@ -8,13 +8,12 @@ class Mworkshop.GridContainerView extends Ember.View
       data: @model.toArray(),
       dataSchema: @newStudent,
       contextMenu: true,
-      colHeaders: ['First Name', 'Last Name'],
+      colHeaders: ['Name'],
       rowHeaders: true,
       stretchH: 'all',
       minSpareRows: 0,
       columns: [
-        {data: @property("first_name")},
-        {data: @property("last_name")}
+        {data: @property("name")},
       ]
     @grid.find('table').addClass('table')
   property:(attr) ->

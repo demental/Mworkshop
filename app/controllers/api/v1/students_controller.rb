@@ -25,7 +25,7 @@ class Api::V1::StudentsController < ApplicationController
   end
 
   def create_params
-    params.require(:student).permit(:first_name, :last_name, :group_id)
+    params.require(:student).permit(:name, :group_id)
   end
 
 end
