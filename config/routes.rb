@@ -11,6 +11,7 @@ Mworkshop::Application.routes.draw do
       resources :students
       resources :periods
       resources :groups
+      resources :workshops
       resources :enums, only: :index
     end
   end

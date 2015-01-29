@@ -1,1 +1,45 @@
 <h2>Workshops</h2>
+
+
+<table class="table table-bordered table-nopad">
+<tr>
+<th>Name</th><th>Max attendees</th><th>Instructor</th><th>Day of week</th><th>Grades</th>
+</tr>
+{{#each workshop in model itemController="workshop"}}
+  <tr>
+    <td>
+      {{input type="text" value=workshop.name focus-out="acceptChanges" insert-newline="acceptChanges"}}
+    </td>
+    <td>
+      {{input type="text" value=workshop.max_attendees focus-out="acceptChanges" insert-newline="acceptChanges"}}
+    </td>
+    <td>
+      {{input type="text" value=workshop.instructor focus-out="acceptChanges" insert-newline="acceptChanges"}}
+    </td>
+    <td>
+      {{input type="text" value=workshop.day focus-out="acceptChanges" insert-newline="acceptChanges"}}
+    </td>
+    <td>
+      {{input type="text" value=workshop.grades focus-out="acceptChanges" insert-newline="acceptChanges"}}
+    </td>
+  </tr>
+{{/each}}
+  <tr>
+    <td>
+      {{input id="new-workshop-name" type="text" placeholder="Name" value=name action="create"}}
+    </td>
+    <td>
+      {{input type="text" placeholder="Max attendees" value=max_attendees  action="create"}}
+    </td>
+    <td>
+      {{input type="text" placeholder="Instructor" value=instructor action="create"}}
+    </td>
+    <td>
+      {{input type="text" placeholder="Day of week" value=day action="create"}}
+    </td>
+    <td>
+      {{input type="text" placeholder="Grades" value=grades action="create"}}
+    </td>
+  </tr>
+
+</table>
