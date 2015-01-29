@@ -6,5 +6,6 @@ class Mworkshop.WorkshopController extends Ember.ObjectController
       return false
 
     acceptChanges: () ->
+      @model.set('grades', @model.grades.split(','))
       @model.save()
       return false

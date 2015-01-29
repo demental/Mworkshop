@@ -25,7 +25,7 @@ class Api::V1::WorkshopsController < ApplicationController
   end
 
   def create_params
-    params.require(:workshop).permit(:name, :instructor, :day, :max_attendees, :grades)
+    params.require(:workshop).permit(:name, :instructor, :day, :max_attendees, grades:[])
   end
 
 end
