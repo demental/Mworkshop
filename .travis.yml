@@ -1,5 +1,7 @@
 language: ruby
 services: mongodb
+env:
+  SECRET_KEY_BASE="$(bundle exec rake secret)"
 rvm:
 
   - 2.1.2
