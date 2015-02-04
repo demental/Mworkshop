@@ -1,8 +1,8 @@
 language: ruby
 services: mongodb
 before_script:
-  cp "config/application.yml.sample" "config/application.yml"
-  cp "config/travis/secrets.yml" "config"
+  cp config/application.yml.sample config/application.yml
+
 env:
   SECRET_KEY_BASE="$(bundle exec rake secret)"
 rvm:
