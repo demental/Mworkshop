@@ -1,4 +1,5 @@
 #= require ./store
+#= require_tree ./mixins
 #= require_tree ./models
 #= require_tree ./fixtures
 #= require_tree ./controllers
@@ -6,6 +7,5 @@
 #= require_tree ./helpers
 #= require_tree ./templates
 #= require_tree ./routes
-#= require_tree ./mixins
 #= require ./router
 #= require_self
