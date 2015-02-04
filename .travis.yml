@@ -1,0 +1,9 @@
+language: ruby
+services: mongodb
+before_script:
+  cp config/application.yml.sample config/application.yml
+
+env:
+  SECRET_KEY_BASE="$(bundle exec rake secret)"
+rvm:
+  - 2.1.2
