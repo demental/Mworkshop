@@ -7,3 +7,6 @@ env:
   SECRET_KEY_BASE="$(bundle exec rake secret)"
 rvm:
   - 2.1.2
+notifications:
+  flowdock:
+    secure: "dHhe4X/nzNYe6706aX07xJJXRjAwkLniS0EU6GvbS/TaRJD03iEtKc56PAKziaLnjWLZK+baknTrwgOqom/G1PsBHCelJEbQn9Jo8kq8hmixGO7/d6WoGsyXLsDI2k6lG5HcTSY2s3lUFK7TepYT37TQZBTQycrjytaf4sc99N4="
